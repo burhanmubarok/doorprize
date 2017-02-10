@@ -18,7 +18,7 @@ export class ShuffleComponent implements OnInit {
   looper: any;
   status = Status[0];
   index: number;
-  winner: string = '...';
+  winner: string;
   theWinners = [];
 
   constructor() { }
@@ -29,6 +29,7 @@ export class ShuffleComponent implements OnInit {
 
   prepare() {
     this.status = Status[0];
+    this.winner = '???';
     // this.looper = setInterval(() => { this.shuffle(); }, 500);
   }
 
