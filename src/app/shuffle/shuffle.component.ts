@@ -18,7 +18,7 @@ export class ShuffleComponent implements OnInit {
   looper: any;
   status = Status[0];
   index: number;
-  winner: string;
+  winner: string = '...';
   theWinners = [];
 
   constructor() { }
