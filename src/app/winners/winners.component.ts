@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-winners',
@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./winners.component.css']
 })
 export class WinnersComponent implements OnInit {
+  @Input() data: any;
 
   constructor() { }
 
