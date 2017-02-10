@@ -1,9 +1,14 @@
-import { MaterialModule } from '@angular/material';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { Routes, RouterModule } from '@angular/router';
+
+import { MaterialModule } from '@angular/material';
+
+// Imports for loading & configuring the in-memory web api
+// import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
+// import { InMemoryDataService }  from './in-memory-data.service';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -21,7 +26,7 @@ const routes: Routes = [
   { path: '**', component: HomeComponent }
 ]
 
- 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,11 +37,14 @@ const routes: Routes = [
     WinnersComponent
   ],
   imports: [
-    MaterialModule.forRoot(),
     RouterModule.forRoot(routes),
+    MaterialModule.forRoot(),
     BrowserModule,
     FormsModule,
     HttpModule
+  ],
+  exports: [
+    WinnersComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
