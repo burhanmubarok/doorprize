@@ -53,3 +53,7 @@ body {
   font-family: "Roboto", Georgia, sans-serif;
   ;
 }
+
+md-card {
+  margin: 8px;
+}
