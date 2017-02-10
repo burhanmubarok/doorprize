@@ -1,6 +1,8 @@
-<md-card>
-  <md-card-content align="center">
-    <span>
+<div fxLayout="row">
+  <div fxFlex="50">
+    <md-card>
+      <md-card-content align="center">
+        <span>
       <md-card-subtitle>
         The winner is:
       </md-card-subtitle>
@@ -8,24 +10,21 @@
         {{winner}}
       </md-card-title>
     </span>
-  </md-card-content>
-  <md-card-actions align="center">
-    <button md-icon-button color="primary" md-raised-button (click)="restart()" [disabled]="status != 'finish'">
+      </md-card-content>
+      <md-card-actions align="center">
+        <button md-icon-button color="primary" md-raised-button (click)="restart()" [disabled]="status != 'finish'">
       <md-icon>replay</md-icon>
     </button>
-    <button md-icon-button color="accent" md-raised-button (click)="start()" [disabled]="status != 'prepare'">
+        <button md-icon-button color="accent" md-raised-button (click)="start()" [disabled]="status != 'prepare'">
       <md-icon>play_arrow</md-icon>
     </button>
-    <button md-icon-button color="warn" md-raised-button (click)="stop()" [disabled]="status != 'start'">
+        <button md-icon-button color="warn" md-raised-button (click)="stop()" [disabled]="status != 'start'">
       <md-icon>stop</md-icon>
     </button>
-  </md-card-actions>
-</md-card>
-<div *ngIf="theWinners?.length > 0">
-  <md-list *ngFor="let item of theWinners" dense>
-    <md-list-item>
-      {{item}}
-    </md-list-item>
-    <md-divider></md-divider>
-  </md-list>
+      </md-card-actions>
+    </md-card>
+  </div>
+</div>
+<div>
+  <app-winners [data]="theWinners"></app-winners>
 </div>
