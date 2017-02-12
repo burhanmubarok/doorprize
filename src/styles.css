@@ -54,6 +54,6 @@ body {
   ;
 }
 
-md-card {
+md-card, md-list {
   margin: 8px;
 }

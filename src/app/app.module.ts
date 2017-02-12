@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 import { Routes, RouterModule } from '@angular/router';
 
 import { MaterialModule } from '@angular/material';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 // Imports for loading & configuring the in-memory web api
 // import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
@@ -39,6 +40,7 @@ const routes: Routes = [
   imports: [
     RouterModule.forRoot(routes),
     MaterialModule.forRoot(),
+    FlexLayoutModule.forRoot(),
     BrowserModule,
     FormsModule,
     HttpModule

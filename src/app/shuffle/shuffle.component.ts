@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { emp } from './../_models/iemp';
 
 enum Status {
   prepare = 0,
@@ -20,6 +21,8 @@ export class ShuffleComponent implements OnInit {
   index: number;
   winner: string;
   theWinners = [];
+  emp = emp;
+  image = './../../assets/img/avatar/' + this.winner + '.png';
 
   constructor() { }
 
@@ -38,9 +41,8 @@ export class ShuffleComponent implements OnInit {
   }
 
   start() {
-    clearInterval(this.looper);
     this.status = Status[1];
-    this.looper = setInterval(() => { this.shuffle(); }, 1);
+    this.looper = setInterval(() => { this.shuffle(this.emp.length); }, 1);
   }
 
   stop() {
@@ -49,10 +51,10 @@ export class ShuffleComponent implements OnInit {
     this.theWinners.push(this.winner);
   }
 
-  shuffle(): void {
-    let emp = ['Doni', 'Dita', 'Darma', 'Diti', 'dara', 'dona', 'dito', 'desi', 'deso'];
-    this.index = Math.floor(Math.random() * emp.length - 0) + 0;
-    this.winner = emp[this.index];
+  shuffle(n: number): void {
+    this.index = Math.floor(Math.random() * n - 0) + 0;
+    this.winner = this.emp[this.index];
+    this.image = './../../assets/img/avatar/' + this.winner + '.webP';
   }
 
 }

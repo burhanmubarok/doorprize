@@ -1,0 +1,1 @@
+export const emp = ['a', 'b', 'c', 'e'];

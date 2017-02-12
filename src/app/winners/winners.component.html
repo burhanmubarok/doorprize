@@ -1,6 +1,10 @@
-<md-list *ngFor="let item of data" dense>
-  <md-divider></md-divider>
-  <md-list-item>
-    {{item}}
-  </md-list-item>
-</md-list>
+<div fxLayout="row" fxLayoutAlign="center">
+  <div fxFlex.gt-sm="30" fxFlex>
+    <md-list *ngFor="let item of data" dense>
+      <md-list-item>
+        {{item}}
+      </md-list-item>
+      <md-divider></md-divider>
+    </md-list>
+  </div>
+</div>
