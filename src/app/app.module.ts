@@ -17,6 +17,7 @@ import { WinnerComponent } from './winner/winner.component';
 import { EmployeeComponent } from './employee/employee.component';
 import { ShuffleComponent } from './shuffle/shuffle.component';
 import { WinnersComponent } from './winners/winners.component';
+import { NamePipe } from './_pipes/name.pipe';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -35,7 +36,8 @@ const routes: Routes = [
     WinnerComponent,
     EmployeeComponent,
     ShuffleComponent,
-    WinnersComponent
+    WinnersComponent,
+    NamePipe
   ],
   imports: [
     RouterModule.forRoot(routes),
