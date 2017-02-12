@@ -22,7 +22,7 @@ export class ShuffleComponent implements OnInit {
   winner: string;
   theWinners = [];
   emp = emp;
-  image = './../../assets/img/avatar/' + this.winner + '.png';
+  image = './../../assets/img/avatar/a.webP';
 
   constructor() { }
 
@@ -49,12 +49,12 @@ export class ShuffleComponent implements OnInit {
     this.status = Status[5];
     clearInterval(this.looper);
     this.theWinners.push(this.winner);
+    this.image = './../../assets/img/avatar/' + this.winner + '.webP';
   }
 
   shuffle(n: number): void {
     this.index = Math.floor(Math.random() * n - 0) + 0;
     this.winner = this.emp[this.index];
-    this.image = './../../assets/img/avatar/' + this.winner + '.webP';
   }
 
 }

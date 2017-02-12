@@ -1,7 +1,6 @@
 <div fxLayout="row" fxLayoutAlign="center">
   <div fxFlex.gt-sm="30" fxFlex>
     <md-card>
-      <img [src]="image" md-card-image>
       <md-card-content align="center">
         <span>
       <md-card-subtitle>
@@ -24,6 +23,21 @@
     </button>
       </md-card-actions>
     </md-card>
+  </div>
+</div>
+<div>
+  <div fxLayout="row" fxLayoutAlign="center">
+    <div fxFlex.gt-sm="30" fxFlex>
+      <md-grid-list cols="1">
+        <md-grid-tile>
+          <img [src]="image">
+          <md-grid-tile-footer>
+            <span md-line>{{winner}}</span>
+            <md-icon>info</md-icon>
+          </md-grid-tile-footer>
+        </md-grid-tile>
+      </md-grid-list>
+    </div>
   </div>
 </div>
 <div>
