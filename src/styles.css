@@ -51,9 +51,15 @@ html,
 body {
   margin: 0px;
   font-family: "Roboto", Georgia, sans-serif;
-  ;
+  background-color: lightgrey;
 }
 
-md-card, md-list {
-  margin: 8px;
+md-grid-list {
+  margin-top: 8px;
+}
+
+md-list {
+  margin-top: 8px;
+  margin-left: 8px;
+  background-color: white;
 }
