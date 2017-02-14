@@ -16,13 +16,13 @@ enum Status {
   styleUrls: ['./shuffle.component.css']
 })
 export class ShuffleComponent implements OnInit {
-  looper: any;
+  shuffler: any;
   status = Status[0];
   index: number;
   winner: string;
   theWinners = [];
   emp = emp;
-  image = './../../assets/img/avatar/a.webP';
+  image: string;
 
   constructor() { }
 
@@ -33,7 +33,7 @@ export class ShuffleComponent implements OnInit {
   prepare() {
     this.status = Status[0];
     this.winner = '???';
-    // this.looper = setInterval(() => { this.shuffle(); }, 500);
+    this.image = './../../assets/img/avatar/x.jpg';
   }
 
   restart() {
@@ -42,12 +42,12 @@ export class ShuffleComponent implements OnInit {
 
   start() {
     this.status = Status[1];
-    this.looper = setInterval(() => { this.shuffle(this.emp.length); }, 1);
+    this.shuffler = setInterval(() => { this.shuffle(this.emp.length); }, 1);
   }
 
   stop() {
     this.status = Status[5];
-    clearInterval(this.looper);
+    clearInterval(this.shuffler);
     this.theWinners.push(this.winner);
     this.image = './../../assets/img/avatar/' + this.winner + '.webP';
   }
