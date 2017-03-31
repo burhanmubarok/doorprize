@@ -1,1 +1,1 @@
-export const emp = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l'];
+export const emp = ['Ahmad', 'Benjamin', 'Clara', 'Delvi', 'Ekalosari', 'Fatah', 'Gerry', 'Horrible', 'Indiana', 'Jekardah', 'Kakak', 'Long'];
