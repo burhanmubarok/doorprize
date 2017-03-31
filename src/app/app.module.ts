@@ -42,7 +42,7 @@ const routes: Routes = [
   imports: [
     RouterModule.forRoot(routes),
     MaterialModule.forRoot(),
-    FlexLayoutModule.forRoot(),
+    FlexLayoutModule,
     BrowserModule,
     FormsModule,
     HttpModule
