@@ -1,1 +1,1 @@
-export const emp = ['Ahmad', 'Benjamin', 'Clara', 'Delvi', 'Ekalosari', 'Fatah', 'Gerry', 'Horrible', 'Indiana', 'Jekardah', 'Kakak', 'Long'];
+export const emp = ['Ahmad', 'Benjamin', 'Clara', 'Delvi', 'Ekalosari', 'Fatah', 'Gerry', 'Hoooooo', 'Indiana', 'Jekardah', 'Kakak', 'Lord'];
